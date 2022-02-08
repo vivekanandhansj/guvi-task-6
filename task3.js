@@ -1,166 +1,187 @@
-// Write a code to print the numbers in the array
-// Output: 1234567891011
-var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-var new_string = "";
+//Fix the code to get the largest of three.
+const aa = (f,s,t) => {//missing const rediclared fst
+    if(f>s &&f>t){
+    console.log(f)}
+    else if(s>f && s>t){
+    console.log(s)}
+    else {
+    console.log(t)}
+   }
+   aa(1,2,3);
+
+
+//Fix the code to Sum of the digits present in the number
+let n = 123;
+
+function add(n)
+{
+let summ = 10;
+for(var i=0;i<n.length;i++){
+ summ+=n[i]
+ }
+ return summ;
+}
+console.log(add(n));
+
+
+//Fix the code to Sum of all numbers using IIFE function
+(function() {
+    let arr = [9,8,5,6,4,3,2,1]
+ let sum11 = 0;
+ for (var i = 0; i < arr.length; i++){
+ sum11 =sum11 + arr[i];
+ }
+ console.log(sum11);
+ return sum11
+})()
+
+
+//Fix the code to return the Prime numbers
+const newArray=[1,3,2,5,10];
+const myPrime=newArray.filter(num=>{
+ for(let i=2;i<=num/2;i++){
+ if(num%i===0)
+ {
+ return false;
+ }
+ }
+ return num!==0;
+});
+console.log(myPrime);
+
+
+//Fix the code to sum the number in that array
+const numm = [10, 20, 30, 40,50,60,70,80,90,100] 
+const summ1 = numm.reduce((a, b) =>{
+ return a + b
  
-for (var i = 0; i < 11; i++) {//erroe i=1 and i--
- new_string += numsArr[i] 
-}
-console.log(new_string);
+})
+console.log(summ1);
 
 
-// Write a code to print the numbers in the array
-// Output: 1,2,3,4,5,6,7,8,9,10,11
-var numsArr1 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-var new_string1 = "";
-for (var i = 0; i < 11; i++) {
- new_string1 += numsArr1[i]+","//error ,
+//print all odd numbers in an array using IIFE function
+var arr14 = [1, 2, 3, 5, 7, 79, 7, 2, 6, 9, 4];
+(function() {
+ for (var i = 0; i < arr14.length; i++) {
+ if (arr14[i] % 2 !== 0) {
+ console.log(arr14[i]);
+ }}
+})();
+
+
+//Fix the code to reverse.
+(function(str){
+  var  str1 = str.split("").reverse().join("");
+    console.log(str1); 
+   })("abcd")
+
+
+//Fix the code to remove duplicates.
+let newArr15 = [];
+var res11 = function(arr){
+    for(var i=0; i < arr.length; i++){
+    
+    if(newArr15.indexOf(arr[i]) == -1) {
+    newArr15.push(arr[i]);
+    } }
+    console.log(newArr15)
+   }
+   res11(["guvi","geek","guvi","duplicate","geeK"])
+
+
+
+
+
+//Sum of odd numbers in an array
+var as=[12,34,5,6,2,56,6,2,1];
+var oddNumbers = as.filter(function(item) {
+   return (item % 2 !== 0);
+})
+var total00 = oddNumbers.reduce(function(tot, curr) {
+    return tot + curr})
+
+console.log(total00);
+  
+
+//Fix the code to gen Title caps.
+var arr004 = ["guvi", "geek", "zen", "fullstack"];
+var ano=function(arro) {
+ for (var i = 0; i < arro.length; i++) {
+ arro[i] = arro[i].charAt(0).toUpperCase() + arro[i].slice(1);
+ return arro.join(' ')
+
  }
+}
+console.log(ano(arr004));
+
+
+//Fix the code to gen Title caps.
+var arr005 = ["guvi", "geek", "zen", "fullstack"];
+(function() {
+ for (var i = 0; i < arr005.length; i++) {
+ console.log(arr005[i][0].toUpperCase() + arr005[i].substr(1))
+ }
+})();
+
+
+// //Swap the odd and even digits
+aaa =(data)=>{
+    var a=data;
+    var l='';
+   for(i=0;i<a.length;i++){
+    var s=a[i+1]
+    var b=a[i]
+    l+=s
+    l+=b
+    i=i+1
+   }
+   if((a.length%2)!=0){
+    l+=a[a.length-1]
+   }
+   console.log(l);
+   }
+   aaa("1234");
+
+//Fix the code to rotate an array by k times and return rotated array using IIFE function
+var arr12 = [1, 2, 3, 6, 8, 6, 1, 9, 10, 12, 13];
+var k = 3;
+k = arr12.length % k;
+(function() {
+ out = arr12.slice(k + 1, arr12.length);
+ var count = out.length;
+ for (var i = 0; i < k + 1; i++) {
+ out[count] = arr12[i];
+ count += 1;
+ }
+ console.log(out);
+})();
+
+
+//Fix the code to give the below output:
+//Expected Output:
+
+[
+   {firstName: "Vasanth", lastName: "Raja", age: 24, role: "JSWizard"},
+   {firstName: "Sri", lastName: "Devi", age: 28, role: "Coder"}
+]
+
+
+var arrayy =[[["firstname","vasanth"],["lastname","Raje"],["age",24],["role","JSWizard"]],
+[["firstname","Sri"],["lastname","Devi"],["age",28],["role", "Coder"]]];
+ var final0=[]
  
-console.log(new_string1)
-
-
-// Write a code to print from last to first with spaces (Make sure there is no space after the last element 1)
-// Output: 11 10 9 8 7 6 5 4 3 2 1
-var numsArr3 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-var new_string3 = ""
-for (var i = numsArr3.length-1; i >= 0; i--) {//error i=11,i>0
-new_string3 += numsArr3[i]+" "
-}
-console.log(new_string3);
-
-
-// Write a code to replace the array value — If the number is even, replace it with ‘even’.
-// Output:[ 1, “even”, 3, “even”, 5, “even”, 7, “even”, 9, “even”, … ]
-var numsArr4 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-for (var i = 0; i <=10; i++) {
- if(numsArr4[i] %2 == 0 )
+while(arrayy.length!==0)
+{
+ var outer_remove = arrayy.shift();
+var new_object={}
+ while(outer_remove.length !==0)
  {
- numsArr4[i] = "Even"//error odd without " "
- }0
-}
-console.log(numsArr4);
 
-
-// Write a code to replace the array value — If the index is even, replace it with ‘even’.
-// Output: [ “even”, 2, “even”, 4, “even”, 6, “even”, 8, “even”, 10, … ]
-var numsArr5 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-for (var i = 0; i <=10; i++) {
- if(numsArr5[i] %2 !== 0 )//error ==
- {
- numsArr5[i] = "even"
+ var inner_remove = outer_remove.shift()
+ var keyy = inner_remove[0]
+ var valuee =inner_remove[1]
+ new_object[keyy]=valuee
  }
+final0.push(new_object)
 }
-console.log(numsArr5);
-
-
-// Write a code to add all the numbers in the array
-// Output: 66
-var numsArr6 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-var sum=0;
-for (var i = 0; i <numsArr6.length; i++) {//error i<11
- 
- sum += numsArr6[i]
-}
-console.log(sum);
-
-
-// Write a code to add the even numbers only
-// Output: 30
-var numsArr7 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-var sum1=0;
-for (var i = 0; i <numsArr7.length; i++) {//error i<10
- if(numsArr7[i]%2 == 0)
- {
- sum1 += numsArr7[i]
-}
-}
-console.log(sum1);
-
-
-// Write a code to add the even numbers and subract the odd numbers
-// Output: 94
-var numsArr8 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-var sum2=100;
-for (var i = 0; i <=10; i++) {
- if(numsArr8[i]%2 ==0)//error != and ,
- {
- sum2 += numsArr8[i]
- } 
-else{
- sum2 -= numsArr8[i]
- }
-}
-console.log(sum2);
-
-
-// Write a code to print inner arrays
-// Output:
-//Array(5) [ 1, 2, 3, 4, 5 ]
-//Array(6) [ 6, 7, 8, 9, 10, 11 ]
-var numsArr9 = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
-for (var i = 0; i <numsArr9.length; i++) {
-    console.log(numsArr9[i].length,numsArr9[i])
- }
-
-
-//Write a code to print elements in the inner arrays
-// // Output: 1234567891011
-var numsArr99 = [[1,2,3,4,5],[ 6,7,8,9,10,11]];
-var str_alll="";
-for (var i = 0; i < numsArr99.length; i++) {
- var inner_array = numsArr99[i];
- for(var j = 0 ; j <inner_array.length;j++ )
-     str_alll += inner_array[j]
-}
-console.log(str_alll);
-
-//Write a code to print elements in the inner arrays in reverse
-//Output: 11 10 9 8 7 6 5 4 3 2 1
-var numsArr10 = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
-var str_all=" ";
-for (var i = numsArr10.length-1; i >= 0; i--) {
- var inner_array = numsArr10[i];
- for(var j = inner_array.length-1; j >= 0 ;j-- )
-     str_all +=numsArr10[i][j]+" "
-}
-console.log(str_all);
-
-
-// // Write a code to replace the array value — If the index is even, replace it with ‘even’.
-//Output: [ [“even”, 2, “even”, 4, “even”], [6, “even”, 8, “even”, 10, …] ]
-var numsArr30 = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
-var str_all30=0;
-for (var i = 0; i < numsArr30.length; i++) {
- var inner_array30 = numsArr30[i];
- for(var j = 0 ; j < inner_array30.length;j++ )
-      if(numsArr30[i][j] %2 == 0 )
-      {
-         numsArr30[i][j] = "even"
-       }
-}
-console.log(numsArr30);
-
-
-// //Write a code to add elements in the inner arrays based on odd or even values
-//Output:
-// 36
-// 30
-var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
-var sum_odd=0;
-var sum_even=0;
-for (var i = 0; i < numsArr.length; i++) {
- var inner_array = numsArr[i];
- for(var j = 0 ; j < inner_array.length;j++ ){
- if(numsArr[i][j]%2!=0)
- {
- sum_odd += numsArr[i][j]
- }
- else
- {
- sum_even += numsArr[i][j]
- }
-}
-}
-console.log(sum_odd);
-console.log(sum_even);
+console.log(final0)
